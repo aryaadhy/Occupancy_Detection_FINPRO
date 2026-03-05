@@ -3,13 +3,8 @@ import pandas as pd
 import pickle
 from feature_engineering import create_features
 
-st.write("Step 1: App started")
-st.write("Step 2: Import success")
-
 # Load model
 model = pickle.load(open("models/occupancy_model.pkl","rb"))
-
-st.write("Step 3: Model loaded")
 
 st.title("Room Occupancy Prediction")
 
@@ -32,8 +27,6 @@ HumidityRatio = st.number_input(
     value=0.00480,
     format="%.5f"
 )
-
-st.write("Step 4: UI start and Input loaded")
 
 if st.button("Predict"):
 
