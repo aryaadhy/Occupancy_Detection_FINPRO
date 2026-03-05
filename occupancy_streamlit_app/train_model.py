@@ -26,7 +26,7 @@ df["hour_cos"] = np.cos(2*np.pi*df["hour"]/24)
 
 # Ratio Features
 df["Light_Temp_ratio"] = df["Light"] / df["Temperature"]
-df["CO2_Humidity_ratio"] = df["CO2"] / df["Humidity"]
+df["CO2_Humidity_ratio"] = df["CO2"] / df["HumidityRatio"]
 
 # ======================
 # Feature Selection
