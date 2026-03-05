@@ -19,7 +19,11 @@ Light = st.number_input("Light")
 CO2 = st.number_input("CO2")
 hour = st.slider("Hour",0,23)
 Temperature = st.number_input("Temperature")
-HumidityRatio = st.number_input("Humidity Ratio")
+HumidityRatio = st.number_input(
+    "Humidity Ratio",
+    value=0.00480,
+    format="%.5f"
+)
 
 st.write("Step 4: UI start and Input loaded")
 
