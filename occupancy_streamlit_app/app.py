@@ -15,10 +15,18 @@ st.title("Room Occupancy Prediction")
 
 st.write("Input sensor values")
 
-Light = st.number_input("Light")
-CO2 = st.number_input("CO2")
+Light = st.number_input(
+    "Light",
+    value=418
+)
+CO2 = st.number_input(
+    "CO2", 
+    value=680
+)
 hour = st.slider("Hour",0,23)
-Temperature = st.number_input("Temperature")
+Temperature = st.number_input(
+    "Temperature",
+    value=23)
 HumidityRatio = st.number_input(
     "Humidity Ratio",
     value=0.00480,
