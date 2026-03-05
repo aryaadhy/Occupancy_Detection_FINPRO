@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 # ======================
 # Load Dataset
 
-df = pd.read_csv("https://raw.githubusercontent.com/aryaadhy/Occupancy_Detection_FINPRO/main/dataset/datatraining.csv")
+df = pd.read_csv("data/datatraining.csv")
 df.drop_duplicates(keep='first', inplace=True)
 df['date'] = pd.to_datetime(df['date'])
 
