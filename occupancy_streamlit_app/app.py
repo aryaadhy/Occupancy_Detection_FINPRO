@@ -1,9 +1,9 @@
-st.write("Step 1: App started")
 import streamlit as st
 import pandas as pd
 import pickle
 from feature_engineering import create_features
 
+st.write("Step 1: App started")
 st.write("Step 2: Import success")
 
 # Load model
