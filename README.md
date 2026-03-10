@@ -4,36 +4,38 @@
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)
-![Status](https://img.shields.io/badge/Project-Completed-success)
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
 Buildings often waste electricity because **lighting and HVAC systems remain active even when rooms are empty**.
 
-This project develops a **Machine Learning model to detect room occupancy using environmental sensor data**, enabling smart systems to automatically optimize energy consumption.
+This project develops a **Machine Learning model that detects room occupancy using environmental sensor data** and enables **smart energy management systems**.
 
-By detecting occupancy in real-time, buildings can:
+The goal is to allow buildings to automatically:
 
-- 💡 Turn off lights in empty rooms  
-- ❄️ Reduce HVAC usage  
+- 💡 Turn off lights when rooms are empty  
+- ❄️ Reduce HVAC activity  
 - 🌱 Improve energy efficiency  
 - 💰 Reduce operational costs  
 
 ---
 
-## 🎯 Project Objective
+# 🚀 Live Demo
 
-Build a **predictive model that can accurately detect room occupancy** using environmental sensors.
+Try the deployed application online:
 
-The model is designed to support **smart building automation systems** that adjust energy usage based on real-time occupancy.
+👉 **Streamlit App**  
+https://occupancydetectionfinpro-8c84xbtlf66sjmzuhtfvtm.streamlit.app
+
+The application allows users to input sensor values and receive **real-time occupancy predictions**.
 
 ---
 
-## 📊 Dataset
+# 📊 Dataset
 
-The dataset contains environmental measurements from indoor sensors.
+The dataset contains indoor environmental sensor measurements.
 
 | Feature | Description |
 |------|------|
@@ -42,20 +44,18 @@ The dataset contains environmental measurements from indoor sensors.
 | Light | Light intensity (Lux) |
 | CO2 | Carbon dioxide concentration |
 | HumidityRatio | Absolute humidity |
-| Occupancy | Target variable (0 = empty, 1 = occupied) |
+| Occupancy | Target variable (0 = Empty, 1 = Occupied) |
 
-The model was evaluated using **multiple test datasets** to ensure stability and generalization.
+Multiple datasets were used to ensure **model stability and generalization**.
 
 ---
 
-## ⚙️ Feature Engineering
+# ⚙️ Feature Engineering
 
-To improve predictive performance, several feature engineering techniques were applied.
+Several feature engineering techniques were applied to improve model performance.
 
-### 1️⃣ Cyclical Time Encoding
-
-Human activity follows daily patterns. Time features were transformed using cyclical encoding.
+### Cyclical Time Encoding
 
 ```python
-hour_sin = sin(2π * hour / 24)
-hour_cos = cos(2π * hour / 24)
+hour_sin = np.sin(2*np.pi*hour/24)
+hour_cos = np.cos(2*np.pi*hour/24)
